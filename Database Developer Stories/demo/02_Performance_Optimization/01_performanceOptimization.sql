@@ -5,13 +5,11 @@ as
 begin
 	declare @Counter int = 0
 	declare @Id int
-
-	declare MySecretCursor cursor for select Id from Users
+    declare MySecretCursor cursor for select Id from Users
 
 	open MySecretCursor
 
 	fetch next from MySecretCursor into @Id
-
 	while @@FETCH_STATUS = 0
 	begin
 		if @Id = @MyParam
