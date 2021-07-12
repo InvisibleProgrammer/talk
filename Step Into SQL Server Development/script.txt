@@ -1,0 +1,62 @@
+Step into SQL Server Programming
+
+- Introduction, what we are going to do
+- Compare versions
+- Utilities: SSMS, Azure Data Studio, VSCode, JetBrains DataGrip
+- Configure SSMS: query shortcuts
+
+
+Flows:
+	- Install, setup (elokeszites, doksik)
+	- Registration (pwd)	20
+	- Activate user 		15
+	- Login					10
+	- Ban user				5	
+	
+	- Add todo				15
+	- Complete todo			10
+	- Modify todo			5
+	- List todos			30	
+	- Fix indexes			10
+	
+	- Security risk: delete old passwords	15
+		- Refactor: move passwords to their own table
+		- Login SP should return with a different return code if there is no password
+		- Create password SP
+		- Truncate pwd table
+	- Security risk: store last 10 login locations 15
+		- New table: store known IPs. Automatic clean up after 3 months
+		- New SP: prelogincheck. If the IP address is new, we need to catpcha
+		
+	- Version control 30-45
+		- DbUp (Downgrade with an extension: https://github.com/asimeonov/DbUp.Downgrade)
+			- Demo project based on the web site
+			- Create dummy table
+			- Insert a test record
+			- Relese (F5)
+			- Check in SSMS
+			- Mention Downgrade as well
+		- SSDT
+			- Demo project
+			- Import previous db
+			- Modify table - add a column
+			- Fill the new column 
+			- Publish 
+			- Check in SSMS
+			- Mention Source control
+
+Additional resources
+	- Overall documentation: https://docs.microsoft.com/en-us/sql/sql-server/?view=sql-server-ver15
+	- Index structure: https://docs.microsoft.com/en-us/sql/relational-databases/sql-server-index-design-guide?view=sql-server-ver15
+	- Learning Path: https://docs.microsoft.com/en-us/learn/certifications/browse/?products=sql-server
+	- Blogs, online resources: 
+		- https://www.brentozar.com/blog/
+		- https://www.sqlservercentral.com/blogs
+	- Sample databases
+		- https://docs.microsoft.com/en-us/sql/samples/sql-samples-where-are?view=sql-server-ver15
+		- StackOverflow dump: https://archive.org/details/stackexchange
+	
+Navigate to downloads: https://www.microsoft.com/en-us/sql-server/sql-server-downloads
+SSMS Install page: https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?redirectedfrom=MSDN&view=sql-server-ver15
+
+
