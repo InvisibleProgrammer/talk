@@ -1,0 +1,20 @@
+Adott egy tábla az alábbi oszlopokkal és körülbelul 10 millió sorral:
+	UserId
+	EmailAddress
+	PasswordHash
+	UserStatus
+	Confirmed
+	CreatedAt
+	ModifiedAt
+	
+1.: Hogyan lehetne kitorolni az összes olyan sort amelyeknél a Confirmed = 0?
+2.: Hogyan lehetne hozzáadni egy új mezőt (LastPasswordChangedAt) 
+ami egy óra-perc pontosságú dátum és kötelező kitölteni? 
+Megjegyzés: A már meglévő rekordoknál az alapértelmezett érték legyen 2020. 01. 01, 12:00.
+3.: Hogyan lehetne kiszervezni a PasswordHash oszlopot egy új táblába? 
+A tábla neve legyen UserPassword.
+
+És persze mindegyik válasznál vegyük figyelembe hogy a rendszert folyamatosan használják.
+Leállás nem megengedett, nincs terhelés mentes időszak :D 
+
+
