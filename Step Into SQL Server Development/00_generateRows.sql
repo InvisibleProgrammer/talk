@@ -1,4 +1,6 @@
 select count(1) from users
+select top(100) * from users
+truncate table users
 
 --select * from users
 --go
@@ -30,11 +32,6 @@ select count(1) from users
 
 --create nonclustered index IDX_Users_ModifiedAt on Users (ModifiedAt)
 --go
-
-alter table Users alter column PasswordHash varchar(100) null 
-go
-
-alter table Users alter column PasswordHash varchar(100) not null 
 
 ;
 WITH
@@ -85,7 +82,7 @@ select
 	/* ConfirmedAt */ DATEADD(day, (ABS(CHECKSUM(NEWID())) % 2380), '2015-01-01')
 from nums
 --where k <= 100 --1000000
-where k <= 5000000
+where k <= 10000000
 
 go
 
